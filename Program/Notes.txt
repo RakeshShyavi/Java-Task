@@ -1,0 +1,78 @@
+  +----------------------------------------+
+  |              Start                     |
+  +----------------------------------------+
+                  |
+                  V
+  +-----------------------------------------------+
+  |   Input Lift Positions and Status             |
+  |     - Lift A current position                 |
+  |     - Lift B current position                 |
+  |     - Lift A status (moving/stationary)       |
+  |     - Lift B status (moving/stationary)       |
+  |     - Lift A destination position (if moving) |
+  |     - Lift B destination position (if moving) |
+  +-----------------------------------------------+
+                  |
+                  V
+  +----------------------------------------+
+  |   Input Client Position and Direction  |
+  |     - Client current position floor    |
+  |     - Client direction (up/down)       |
+  +----------------------------------------+
+                  |
+                  V
+  +----------------------------------------+
+  |       Calculate Distances              |
+  |     - Calculate distance of Lift A     |
+  |     - Calculate distance of Lift B     |
+  +----------------------------------------+
+                  |
+                  V
+  +---------------------------------------------+
+  |       Compare Distances                     |
+  |     - Compare distances of Lift A and B     |
+  +---------------------------------------------+
+                  |
+                  V
+  +----------------------------------------+
+  |          Output Result                 |
+  |     - Output which lift comes first    |
+  +----------------------------------------+
+                  |
+                  V
+  +----------------------------------------+
+  |              End                       |
+  +----------------------------------------+
+
+
+Efficient Ordering: A priority queue automatically orders elements based on their priority (in this case, 
+the distance of elevators from the client). This eliminates the need for manual sorting, making 
+the code simpler and more efficient.
+
+Optimized Retrieval: The smallest distance (closest elevator) is always available at the front of 
+the priority queue. This optimized retrieval ensures that the code can quickly determine which 
+elevator will arrive first without iterating through the entire collection.
+
+Dynamic Adaptability: As new distances are calculated and added to the priority queue, it automatically 
+maintains its ordering, adapting to changes in the distances of the elevators. This dynamic adaptability 
+is crucial for real-time scenarios where elevator positions may change frequently.
+
+Scalability: In scenarios with multiple elevators and clients, a priority queue scales efficiently. It 
+maintains its performance characteristics even as the number of elements increases, ensuring that the code 
+remains responsive and scalable.
+
+Clear Intent: The use of a priority queue conveys the intent of the code clearly. It indicates that the primary 
+concern is to prioritize the elevator that can reach the client in the shortest time, aligning with the common 
+expectation in elevator systems.
+
+By highlighting these reasons, you can effectively communicate why a priority queue is the preferred choice 
+for managing elevator distances in the given code, emphasizing its benefits in terms of efficiency, 
+adaptability, scalability, and clarity of intent.
+
+
+
+
+
+
+
+
